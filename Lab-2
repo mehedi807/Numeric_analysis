@@ -149,28 +149,7 @@ ans =
     9    7    6   12
     4   14   15    1
 
->> hilb
 
-
-
-error: Invalid call to hilb.  Correct usage is:
-
- -- hilb (N)
-
-Additional help for built-in functions and operators is
-available in the online version of the manual.  Use the command
-'doc <topic>' to search the manual index.
-
-Help and information about Octave is also available on the WWW
-at https://www.octave.org and via the help@octave.org
-mailing list.
->>
->>
->>
->> hilb --help
-error: hilb: N must be a scalar integer
-error: called from
-    hilb at line 61 column 5
 >> hilb(5)
 ans =
 
@@ -190,7 +169,7 @@ ans =
 
 
 How to multiply the non-diagonal elements by 2
-error: 'How' undefined near line 1 column 1
+
 >> matrix = [1,2,3; 4,5,6; 7,8,9]
 matrix =
 
