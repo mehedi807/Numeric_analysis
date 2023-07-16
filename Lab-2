@@ -1,0 +1,248 @@
+>> Allmarks = [24,44,36,36 ; 52,54,65,44; 56,22,66,44;24,44,36,36 ; 52,54,65,44; 56,22,66,44]
+Allmarks =
+
+   24   44   36   36
+   52   54   65   44
+   56   22   66   44
+   24   44   36   36
+   52   54   65   44
+   56   22   66   44
+
+>> Allmarks([4,6] , [1,2,3])
+ans =
+
+   24   44   36
+   56   22   66
+
+>> Allmarks([4:6] , [1,2,3])
+ans =
+
+   24   44   36
+   52   54   65
+   56   22   66
+
+>> Allmarks([4:6] , [1:3])
+ans =
+
+   24   44   36
+   52   54   65
+   56   22   66
+
+
+>> mean(Allmarks(:,:))
+ans =
+
+   44.000   40.000   55.667   41.333
+
+>> mean(Allmarks(2,:))
+ans =  53.750
+>> mean(Allmarks([2,3],1))
+ans =  54
+>> Allmarks
+Allmarks =
+
+   24   44   36   36
+   52   54   65   44
+   56   22   66   44
+   24   44   36   36
+   52   54   65   44
+   56   22   66   44
+
+>> Allmarks = Allmarks / 10
+Allmarks =
+
+   2.4000   4.4000   3.6000   3.6000
+   5.2000   5.4000   6.5000   4.4000
+   5.6000   2.2000   6.6000   4.4000
+   2.4000   4.4000   3.6000   3.6000
+   5.2000   5.4000   6.5000   4.4000
+   5.6000   2.2000   6.6000   4.4000
+
+>> ones(2,4)
+ans =
+
+   1   1   1   1
+   1   1   1   1
+
+>> zeros(4,6)
+ans =
+
+   0   0   0   0   0   0
+   0   0   0   0   0   0
+   0   0   0   0   0   0
+   0   0   0   0   0   0
+
+>> eye(2,3)
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+
+>> eye(3,3)
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+>> eye(5)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0
+   0   1   0   0   0
+   0   0   1   0   0
+   0   0   0   1   0
+   0   0   0   0   1
+
+>> diag(3)
+ans =  3
+>> diag(ans)
+ans =  3
+>> diag(Allmarks)
+ans =
+
+   2.4000
+   5.4000
+   6.6000
+   3.6000
+
+>> Allmarks
+Allmarks =
+
+   2.4000   4.4000   3.6000   3.6000
+   5.2000   5.4000   6.5000   4.4000
+   5.6000   2.2000   6.6000   4.4000
+   2.4000   4.4000   3.6000   3.6000
+   5.2000   5.4000   6.5000   4.4000
+   5.6000   2.2000   6.6000   4.4000
+
+>> rand(2,4)
+ans =
+
+   0.7608951   0.5299967   0.1271715   0.0086800
+   0.3791206   0.3828421   0.0696858   0.5176114
+
+>> magic(3)
+ans =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> magic(2)
+ans =
+
+   4   3
+   1   2
+
+>> magic(4)
+ans =
+
+   16    2    3   13
+    5   11   10    8
+    9    7    6   12
+    4   14   15    1
+
+>> hilb
+
+
+
+error: Invalid call to hilb.  Correct usage is:
+
+ -- hilb (N)
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>>
+>>
+>>
+>> hilb --help
+error: hilb: N must be a scalar integer
+error: called from
+    hilb at line 61 column 5
+>> hilb(5)
+ans =
+
+   1.00000   0.50000   0.33333   0.25000   0.20000
+   0.50000   0.33333   0.25000   0.20000   0.16667
+   0.33333   0.25000   0.20000   0.16667   0.14286
+   0.25000   0.20000   0.16667   0.14286   0.12500
+   0.20000   0.16667   0.14286   0.12500   0.11111
+
+>> clc
+>> hilb(2)
+ans =
+
+   1.00000   0.50000
+   0.50000   0.33333
+
+
+
+How to multiply the non-diagonal elements by 2
+error: 'How' undefined near line 1 column 1
+>> matrix = [1,2,3; 4,5,6; 7,8,9]
+matrix =
+
+   1   2   3
+   4   5   6
+   7   8   9
+
+>> eye(size(matrix))
+ans =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+>> I = ans
+I =
+
+Diagonal Matrix
+
+   1   0   0
+   0   1   0
+   0   0   1
+
+>> ans = 1-I
+ans =
+
+   0   1   1
+   1   0   1
+   1   1   0
+
+>> ans = ans * 2
+ans =
+
+   0   2   2
+   2   0   2
+   2   2   0
+
+>> ans = ans + I
+ans =
+
+   1   2   2
+   2   1   2
+   2   2   1
+
+
+>> B = matrix.*ans
+B =
+
+    1    4    6
+    8    5   12
+   14   16    9
+
+>>
